@@ -340,7 +340,7 @@ img {
 
 .main-nav-link:hover,
 .main-nav-link:active,
-.main-nav-list.main-nav-link--current {
+.main-nav-link--current {
   font-weight: 600;
 }
 
