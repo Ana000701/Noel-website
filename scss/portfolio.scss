@@ -1,23 +1,6 @@
 @import "general";
 @import "header";
 @import "footer";
-img {
-  max-width: 100%;
-  height: auto;
-  vertical-align: middle;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-body {
-  // font-size: 100%;
-  line-height: 24px;
-  font-family: "Noto Sans", sans-serif;
-}
 
 // main header
 main .hero-section {
