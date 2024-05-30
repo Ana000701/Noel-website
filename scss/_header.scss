@@ -1,0 +1,89 @@
+/**************************/
+/* HEADER */
+/**************************/
+.header {
+  padding: 2.8rem 0;
+  border-bottom: 1px solid #f1f1f1;
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* NAVIGATION */
+.main-nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+.main-nav-link:link,
+.main-nav-link:visited {
+  color: #000;
+  font-weight: 400;
+  text-decoration: none;
+  padding: 0.4rem 0.8rem;
+
+  position: relative;
+  display: block;
+}
+.main-nav-link:hover,
+.main-nav-link:active {
+  font-weight: 600;
+}
+.main-nav-link:hover::before,
+.main-nav-link:active::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid #919191;
+  mask: conic-gradient(at 8px 8px, rgba(0, 0, 0, 0) 75%, #fff 0) 0 0 /
+      calc(100% - 8px) calc(100% - 8px),
+    linear-gradient(#fff 0 0) content-box;
+}
+/* HAMBURGER MENU */
+.hamburger {
+  position: relative;
+}
+.nav-btn {
+  opacity: 0;
+  width: 4rem;
+  height: 4rem;
+  cursor: pointer;
+  border: 0;
+  background-color: #fff;
+}
+.hamburger-nav-list {
+  width: 37.5rem;
+  list-style: none;
+  background-color: #fff;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.4rem;
+  padding: 4rem 0;
+  /*將選單下移，不要遮到header區塊*/
+  position: absolute;
+  top: 4.9rem;
+  right: -1.2rem;
+}
+.close {
+  display: none;
+}
+
+/*------------------------------------*/
+/*RWD 設定 max-width: 576px*/
+@media (max-width: 48em) {
+  .header {
+    padding: 0.8rem 1.2rem;
+    border-bottom: 1px solid #f1f1f1;
+  }
+  .main-nav-list {
+    display: none;
+  }
+  .nav-btn {
+    opacity: 100;
+  }
+}
+/*------------------------------------*/

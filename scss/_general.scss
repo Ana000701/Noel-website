@@ -1,0 +1,299 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* 瀏覽器預設字體是16px，在未修改字體大小時，1rem = 16px */
+  /* 設定font-size: 10px，1rem = 10px */
+  /* 10px / 16px = 0.625 = percentage of user's browser font-size setting */
+  font-size: 62.5%;
+}
+
+body {
+  /* font-size: 100%; */
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-family: "Noto Sans", sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+/**************************/
+/* LAYOUT REUSABLE COMPONENTS */
+/**************************/
+.container {
+  /* 1296px */
+  max-width: 129.6rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.4rem;
+}
+/*------------------------------------*/
+/*RWD 設定 max-width: 1200px*/
+@media (max-width: 75em) {
+  .menu {
+    flex-wrap: wrap;
+  }
+}
+/*RWD 設定 max-width: 767px*/
+@media (max-width: 48em) {
+  .menu {
+    flex-direction: column;
+  }
+}
+/*------------------------------------*/
+
+/**************************/
+/* STYLE REUSABLE COMPONENTS */
+/**************************/
+.hightlight {
+  background: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/mark.png?raw=true);
+  background-repeat: no-repeat;
+  background-position: bottom 1px right 0px;
+  background-size: contain;
+  padding-right: 0.4rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1.6rem 3.2rem;
+  border-radius: 0.5rem;
+
+  color: #fff;
+  background-color: #000;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 3rem;
+  text-decoration: none;
+  span {
+    vertical-align: sub;
+  }
+}
+/*------------------------------------*/
+/*RWD 設定 max-width: 1295px*/
+@media (max-width: 80em) {
+  .btn {
+    padding: 0.8rem 1.6rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    span {
+      font-size: 2rem;
+    }
+  }
+}
+/*------------------------------------*/
+/**************************/
+/* TITLE REUSABLE COMPONENTS */
+/**************************/
+.wrap {
+  width: 37.2rem;
+  margin: 0 auto 8rem;
+}
+.wrap h2 {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.title-text {
+  color: #3b3b3b;
+  font-size: 3.2rem;
+  font-weight: 600;
+  line-height: 3.84rem;
+  letter-spacing: 0.12em;
+  /*處理文字與背景線條重疊的部分*/
+  background-color: #fff;
+  padding: 0 1.6rem;
+  z-index: 1;
+}
+.wrap h2::before {
+  content: "";
+  position: absolute;
+  /*背景的寬高*/
+  width: 36rem;
+  height: 1px;
+  background-color: #c1c1c1;
+  transform: translate(-50%, -50%);
+  /*背景線條的位置*/
+  top: 50%;
+  left: 50%;
+  z-index: 0;
+}
+.title-text::before {
+  content: "";
+  position: absolute;
+  /*左圓點的大小*/
+  width: 6px;
+  height: 6px;
+  background-color: #c1c1c1;
+  border-radius: 50%;
+  /*左圓點的位置*/
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.title-text::after {
+  content: "";
+  position: absolute;
+  /*右圓點的大小*/
+  width: 6px;
+  height: 6px;
+  background-color: #c1c1c1;
+  border-radius: 50%;
+  /*右圓點的位置*/
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+/*------------------------------------*/
+/* RWD 設定 max-width: 992px*/
+@media (max-width: 62em) {
+  .wrap {
+    width: 24.9rem;
+    margin: 0 auto 4rem;
+  }
+  .title-text {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 2.88rem;
+  }
+  .wrap h2::before {
+    /*背景的寬高*/
+    width: 23.7rem;
+  }
+}
+/*------------------------------------*/
+
+/**************************/
+/* INTRO-BOX REUSABLE COMPONENTS */
+/**************************/
+
+.flex-box {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+/*------------------------------------*/
+/*RWD 設定 max-width: 1295px*/
+@media (max-width: 80em) {
+  .flex-box {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+/*------------------------------------*/
+
+.intro-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+
+  max-width: 52.6rem;
+  background: #ffffff1a;
+  border-radius: 2.4rem;
+  padding: 8rem 4rem 5.6rem 4rem;
+  margin: 20rem 0;
+}
+.intro-wrap {
+  width: 44.6rem;
+  border-bottom: 1px solid #f1f1f1;
+  margin-bottom: 4rem;
+}
+.work-name {
+  color: #ffffff;
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 3.36rem;
+  margin-bottom: 0.8rem;
+}
+.work-text {
+  color: #ffffff;
+  margin-bottom: 2.4rem;
+}
+.tag-menu {
+  list-style: none;
+  display: flex;
+  gap: 1.6rem;
+  margin-bottom: 4rem;
+}
+.tag-item {
+  color: #3b3b3b;
+  background-color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.4rem 1.2rem;
+  border-radius: 1.6rem;
+}
+
+/*------------------------------------*/
+/*RWD 設定 max-width: 1295px*/
+@media (max-width: 80em) {
+  .intro-box {
+    margin: 2.4rem 0 4.8rem 0;
+    padding: 0;
+    text-align: center;
+  }
+  .intro-wrap {
+    border: none;
+  }
+  .work-name {
+    color: #1e1e1e;
+  }
+  .work-text {
+    color: #5b5b5b;
+  }
+  .tag-menu {
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  .tag-item {
+    color: #3b3b3b;
+    background-color: #f1f1f1;
+  }
+}
+/*RWD 設定 max-width: 576px*/
+@media (max-width: 36em) {
+  .intro-box {
+    max-width: 37.5rem;
+    background: #ffffff;
+    border-radius: 1.6rem;
+    margin-bottom: 4.8rem;
+    text-align: center;
+  }
+  .intro-wrap {
+    width: 32.7rem;
+    border-bottom: none;
+    margin-bottom: 2rem;
+  }
+  .work-name {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 2.4rem;
+  }
+  .work-text {
+    margin-bottom: 1.6rem;
+  }
+  .tag-menu {
+    gap: 0.8rem;
+    margin-bottom: 2rem;
+  }
+}
+/*------------------------------------*/

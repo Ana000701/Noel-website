@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Fonts: Noto Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- right forward icon -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <!-- hamburger menu icon-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <!-- close icon -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="stylesheet" href="scss/style.css" />
+    <title>首頁</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <h1 class="logo-link">
+          <a href="index.html"
+            ><img
+              src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/a0deba953fc5322a513e717e7c24b25fa3d946f8/2024%20web-camp/logo.svg"
+              alt="logo"
+              class="logo"
+          /></a>
+        </h1>
+        <nav class="main-nav">
+          <ul class="main-nav-list">
+            <li>
+              <a href="index.html" class="main-nav-link">首頁</a>
+            </li>
+            <li>
+              <a href="portfolio.html" class="main-nav-link">作品集</a>
+            </li>
+            <li>
+              <a href="#" class="main-nav-link">服務項目</a>
+            </li>
+            <li>
+              <a href="#" class="main-nav-link">部落格</a>
+            </li>
+            <li>
+              <a href="#" class="main-nav-link">聯絡我</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="hamburger">
+          <button type="button" class="nav-btn">
+            <span class="material-symbols-outlined hamburger-icon"> menu </span>
+            <span class="material-symbols-outlined close-icon close">
+              close
+            </span>
+          </button>
+          <ul class="hamburger-nav-list close">
+            <li>
+              <a href="index.html" class="main-nav-link">首頁</a>
+            </li>
+            <li>
+              <a href="portfolio.html" class="main-nav-link">作品集</a>
+            </li>
+            <li>
+              <a href="#" class="main-nav-link">服務項目</a>
+            </li>
+            <li>
+              <a href="#" class="main-nav-link">部落格</a>
+            </li>
+            <li>
+              <a href="#" class="main-nav-link">聯絡我</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="section-hero">
+        <div class="hero-text-box">
+          <h2 class="hero-introduction">Hi！我是 Noel</h2>
+          <p class="hero-description">
+            具有 10 年經驗的 <span class="hightlight">資深 UI 設計師</span> 兼
+            <span class="hightlight">前端工程師</span><br />
+            技術雙修並行，熱衷於優化使用者的網頁體驗
+          </p>
+          <p class="hero-technical-text">
+            WEB DEVELOPMENT / BRANDING / UI / UX / APP DESIGN
+          </p>
+          <ul class="media-link-menu">
+            <li>
+              <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+            </li>
+            <li>
+              <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+            </li>
+            <li>
+              <a href="#"><ion-icon name="logo-youtube"></ion-icon></a>
+            </li>
+          </ul>
+        </div>
+        <div class="hero-img-box">
+          <img
+            src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/hero-lg.png?raw=true"
+            alt="author-image"
+            class="hero-lg-image"
+          />
+          <img
+            src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/hero-sm.png?raw=true"
+            alt="author-image"
+            class="hero-sm-image"
+          />
+        </div>
+      </section>
+      <section class="section-work">
+        <div class="container">
+          <div class="wrap">
+            <h2>
+              <span class="title-text">作品介紹</span>
+            </h2>
+          </div>
+        </div>
+        <div class="star-travel-platform">
+          <div class="container flex-box">
+            <div class="flex-item">
+              <img
+                src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/homepage-work1.png?raw=true"
+                alt="star-travel-platform-image"
+                class="star-travel-platform-image"
+              />
+            </div>
+            <div class="intro-box">
+              <div class="intro-wrap">
+                <h3 class="work-name">星際旅行訂票平台</h3>
+                <p class="work-text">悠遊宇宙的夢想，從這裡開始實現</p>
+                <ul class="tag-menu">
+                  <li><a href="#" class="tag-item">網頁設計</a></li>
+                  <li><a href="#" class="tag-item">響應式設計</a></li>
+                  <li><a href="#" class="tag-item">Bootstrap</a></li>
+                </ul>
+              </div>
+              <div class="work-page">
+                <a href="#" class="btn"
+                  >完整介紹
+                  <span class="material-symbols-outlined">
+                    arrow_forward
+                  </span></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="financial-app">
+          <div class="container flex-box">
+            <div class="intro-box">
+              <div class="intro-wrap">
+                <h3 class="work-name">理財APP</h3>
+                <p class="work-text">
+                  連動帳戶與行動支付，讓 AI 提供您最好的理財建議
+                </p>
+                <ul class="tag-menu">
+                  <li><a href="#" class="tag-item">APP設計</a></li>
+                  <li><a href="#" class="tag-item">iOS</a></li>
+                  <li><a href="#" class="tag-item">React</a></li>
+                </ul>
+              </div>
+              <div class="work-page">
+                <a href="#" class="btn"
+                  >完整介紹
+                  <span class="material-symbols-outlined">
+                    arrow_forward
+                  </span></a
+                >
+              </div>
+            </div>
+            <div class="flex-item">
+              <img
+                src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/homepage-work1.png?raw=true"
+                alt="star-travel-platform-image"
+                class="star-travel-platform-image"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="clinic-web">
+          <div class="container flex-box">
+            <div class="flex-item">
+              <img
+                src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/homepage-work3.png?raw=true"
+                alt="clinic-web-image"
+                class="clinic-web-image"
+              />
+            </div>
+            <div class="intro-box">
+              <div class="intro-wrap">
+                <h3 class="work-name">醫美診所官網</h3>
+                <p class="work-text">永保青春的秘密，從粹究開始</p>
+                <ul class="tag-menu">
+                  <li><a href="#" class="tag-item">網頁設計</a></li>
+                  <li><a href="#" class="tag-item">響應式設計</a></li>
+                  <li><a href="#" class="tag-item">ＷordPress</a></li>
+                </ul>
+              </div>
+              <div class="work-page">
+                <a href="#" class="btn"
+                  >完整介紹
+                  <span class="material-symbols-outlined">
+                    arrow_forward
+                  </span></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-service">
+        <div class="container">
+          <div class="wrap">
+            <h2>
+              <span class="title-text">服務項目</span>
+            </h2>
+          </div>
+          <div class="service-menu-box">
+            <ul class="service-menu menu">
+              <li class="service-item">
+                <a href="#" class="service-link"
+                  ><img
+                    src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/a0deba953fc5322a513e717e7c24b25fa3d946f8/2024%20web-camp/service-item-visual.svg"
+                    alt="service-item-visual"
+                    class="service-icon"
+                  />平面設計</a
+                >
+              </li>
+              <li class="service-item">
+                <a href="#" class="service-link"
+                  ><img
+                    src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/a0deba953fc5322a513e717e7c24b25fa3d946f8/2024%20web-camp/service-item-ui.svg"
+                    alt="service-item-visual"
+                    class="service-icon"
+                  />UI 設計</a
+                >
+              </li>
+              <li class="service-item">
+                <a href="#" class="service-link"
+                  ><img
+                    src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/a0deba953fc5322a513e717e7c24b25fa3d946f8/2024%20web-camp/service-item-html%26css.svg"
+                    alt="service-item-visual"
+                    class="service-icon"
+                  />切版服務</a
+                >
+              </li>
+              <li class="service-item">
+                <a href="#" class="service-link"
+                  ><img
+                    src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/a0deba953fc5322a513e717e7c24b25fa3d946f8/2024%20web-camp/service-item-front-end.svg"
+                    alt="service-item-visual"
+                    class="service-icon"
+                  />前端開發</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="contact-button">
+            <h3 class="contact-text">想要合作或瞭解更多？</h3>
+
+            <a href="#" class="btn"
+              >詳細內容與合作流程
+              <span class="material-symbols-outlined"> arrow_forward </span></a
+            >
+          </div>
+        </div>
+      </section>
+      <section class="section-article">
+        <div class="container">
+          <div class="wrap">
+            <h2>
+              <span class="title-text">精選文章</span>
+            </h2>
+          </div>
+          <div class="article-menu-box">
+            <ul class="article-menu menu">
+              <li class="article-item">
+                <img
+                  src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/article-image1.png?raw=true"
+                  alt="article-image1"
+                  class="article-image"
+                />
+                <div class="article-intro">
+                  <h3 class="article-title">
+                    Vision Pro 登場！Vision Pro UI/UX 設計重點大公開 (上)
+                  </h3>
+                  <div>
+                    <a href="#" class="article-tag">UI/UX 新知</a>
+                    <p class="article-time">2024/02/10</p>
+                  </div>
+                </div>
+              </li>
+              <li class="article-item">
+                <img
+                  src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/article-image2.png?raw=true"
+                  alt="article-image2"
+                  class="article-image"
+                />
+                <div class="article-intro">
+                  <h3 class="article-title">
+                    給設計師和工程師的 Figma-Dev Mode 開發模式使用指南 (下)
+                  </h3>
+                  <div>
+                    <a href="#" class="article-tag">UI/UX 新知</a>
+                    <p class="article-time">2023/11/20</p>
+                  </div>
+                </div>
+              </li>
+              <li class="article-item">
+                <img
+                  src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/article-image3.png?raw=true"
+                  alt="article-image3"
+                  class="article-image"
+                />
+                <div class="article-intro">
+                  <h3 class="article-title">
+                    給設計師和工程師的 Figma-Dev Mode 開發模式使用指南 (上)
+                  </h3>
+                  <div>
+                    <a href="#" class="article-tag">UI/UX 新知</a>
+                    <p class="article-time">2023/10/18</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="more-article">
+            <a href="#" class="btn"
+              >更多文章
+              <span class="material-symbols-outlined"> arrow_forward </span></a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container footer-flex-box">
+        <div class="footer-logo-slogen-box">
+          <a href="index.html" class="footer-logo-box">
+            <img
+              src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/a0deba953fc5322a513e717e7c24b25fa3d946f8/2024%20web-camp/logo.svg"
+              alt="logo"
+          /></a>
+          <p class="footer-slogen">
+            若有數位產品設計和開發相關問題<br />
+            歡迎填寫表單，或直接與我聯絡！
+          </p>
+          <a href="#" class="email">service@hexschool.com</a>
+        </div>
+        <div class="footer-nav">
+          <ul class="footer-media-menu">
+            <li class="media-item">
+              <a href="#" class="media-link media-link--current"
+                ><img
+                  src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/a0deba953fc5322a513e717e7c24b25fa3d946f8/2024%20web-camp/list.svg"
+                  alt="surveyicon"
+                />填寫表單</a
+              >
+            </li>
+            <li class="media-item">
+              <a href="#" class="media-link"
+                ><img
+                  src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/a0deba953fc5322a513e717e7c24b25fa3d946f8/2024%20web-camp/instagram.svg"
+                  alt="instagram"
+                />hexschool_demo</a
+              >
+            </li>
+            <li class="media-item">
+              <a href="#" class="media-link"
+                ><img
+                  src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/a0deba953fc5322a513e717e7c24b25fa3d946f8/2024%20web-camp/facebook.svg"
+                  alt="facebook"
+                />hexschoolTW</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/hamburger.js"></script>
+  </body>
+</html>

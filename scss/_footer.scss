@@ -1,0 +1,99 @@
+/**************************/
+/* FOOTER SECTION */
+/**************************/
+.footer {
+  border-top: 1px solid #f1f1f1;
+  padding: 8rem 0;
+  // 背景圖層
+  background: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/footer-bg-lg.png?raw=true);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.footer-flex-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+}
+.footer-logo-slogen-box {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 2.4rem;
+}
+.footer-logo-box {
+  width: 12rem;
+  padding: 0.7rem;
+}
+.footer-slogen {
+  color: #3b3b3b;
+  font-size: 2rem;
+  line-height: 3rem;
+}
+.email:link,
+.email:visited {
+  display: block;
+  color: #919191;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  text-decoration: none;
+}
+
+.email:hover,
+.email:active {
+  color: #3b3b3b;
+}
+
+.footer-media-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.media-item {
+  display: flex;
+  justify-content: flex-start;
+  gap: 0.8rem;
+  text-align: left;
+}
+
+.media-link:link,
+.media-link:visited {
+  width: 30.6rem;
+  padding: 0.8rem 2.4rem;
+
+  color: #3b3b3b;
+  background-color: #fff;
+  outline: 1px solid #c1c1c1;
+  font-size: 2rem;
+  line-height: 3rem;
+  text-decoration: none;
+  border-radius: 0.8rem;
+}
+
+// 底部 社群媒體選單項目 <li>標籤第一個之<a>標籤改色
+.media-link:hover,
+.media-link:active,
+.media-link.media-link--current {
+  color: #fff;
+  background-color: #000;
+  font-weight: 700;
+}
+
+/*------------------------------------*/
+/*RWD 設定 max-width: 767px*/
+@media (max-width: 46em) {
+  .footer {
+    background: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/footer-bg-sm.png?raw=true);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .footer-flex-box {
+    flex-direction: column;
+  }
+  .media-link:link,
+  .media-link:visited {
+    padding: 0.4rem 2.4rem;
+  }
+}
+/*------------------------------------*/

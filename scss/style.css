@@ -1,0 +1,806 @@
+@charset "UTF-8";
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* 瀏覽器預設字體是16px，在未修改字體大小時，1rem = 16px */
+  /* 設定font-size: 10px，1rem = 10px */
+  /* 10px / 16px = 0.625 = percentage of user's browser font-size setting */
+  font-size: 62.5%;
+}
+
+body {
+  /* font-size: 100%; */
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-family: "Noto Sans", sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+/**************************/
+/* LAYOUT REUSABLE COMPONENTS */
+/**************************/
+.container {
+  /* 1296px */
+  max-width: 129.6rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.4rem;
+}
+
+/*------------------------------------*/
+/*RWD 設定 max-width: 1200px*/
+@media (max-width: 75em) {
+  .menu {
+    flex-wrap: wrap;
+  }
+}
+/*RWD 設定 max-width: 767px*/
+@media (max-width: 48em) {
+  .menu {
+    flex-direction: column;
+  }
+}
+/*------------------------------------*/
+/**************************/
+/* STYLE REUSABLE COMPONENTS */
+/**************************/
+.hightlight {
+  background: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/mark.png?raw=true);
+  background-repeat: no-repeat;
+  background-position: bottom 1px right 0px;
+  background-size: contain;
+  padding-right: 0.4rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1.6rem 3.2rem;
+  border-radius: 0.5rem;
+  color: #fff;
+  background-color: #000;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 3rem;
+  text-decoration: none;
+}
+.btn span {
+  vertical-align: sub;
+}
+
+/*------------------------------------*/
+/*RWD 設定 max-width: 1295px*/
+@media (max-width: 80em) {
+  .btn {
+    padding: 0.8rem 1.6rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+  }
+  .btn span {
+    font-size: 2rem;
+  }
+}
+/*------------------------------------*/
+/**************************/
+/* TITLE REUSABLE COMPONENTS */
+/**************************/
+.wrap {
+  width: 37.2rem;
+  margin: 0 auto 8rem;
+}
+
+.wrap h2 {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.title-text {
+  color: #3b3b3b;
+  font-size: 3.2rem;
+  font-weight: 600;
+  line-height: 3.84rem;
+  letter-spacing: 0.12em;
+  /*處理文字與背景線條重疊的部分*/
+  background-color: #fff;
+  padding: 0 1.6rem;
+  z-index: 1;
+}
+
+.wrap h2::before {
+  content: "";
+  position: absolute;
+  /*背景的寬高*/
+  width: 36rem;
+  height: 1px;
+  background-color: #c1c1c1;
+  transform: translate(-50%, -50%);
+  /*背景線條的位置*/
+  top: 50%;
+  left: 50%;
+  z-index: 0;
+}
+
+.title-text::before {
+  content: "";
+  position: absolute;
+  /*左圓點的大小*/
+  width: 6px;
+  height: 6px;
+  background-color: #c1c1c1;
+  border-radius: 50%;
+  /*左圓點的位置*/
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.title-text::after {
+  content: "";
+  position: absolute;
+  /*右圓點的大小*/
+  width: 6px;
+  height: 6px;
+  background-color: #c1c1c1;
+  border-radius: 50%;
+  /*右圓點的位置*/
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+/*------------------------------------*/
+/* RWD 設定 max-width: 992px*/
+@media (max-width: 62em) {
+  .wrap {
+    width: 24.9rem;
+    margin: 0 auto 4rem;
+  }
+  .title-text {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 2.88rem;
+  }
+  .wrap h2::before {
+    /*背景的寬高*/
+    width: 23.7rem;
+  }
+}
+/*------------------------------------*/
+/**************************/
+/* INTRO-BOX REUSABLE COMPONENTS */
+/**************************/
+.flex-box {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+/*------------------------------------*/
+/*RWD 設定 max-width: 1295px*/
+@media (max-width: 80em) {
+  .flex-box {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+/*------------------------------------*/
+.intro-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  max-width: 52.6rem;
+  background: rgba(255, 255, 255, 0.1019607843);
+  border-radius: 2.4rem;
+  padding: 8rem 4rem 5.6rem 4rem;
+  margin: 20rem 0;
+}
+
+.intro-wrap {
+  width: 44.6rem;
+  border-bottom: 1px solid #f1f1f1;
+  margin-bottom: 4rem;
+}
+
+.work-name {
+  color: #ffffff;
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 3.36rem;
+  margin-bottom: 0.8rem;
+}
+
+.work-text {
+  color: #ffffff;
+  margin-bottom: 2.4rem;
+}
+
+.tag-menu {
+  list-style: none;
+  display: flex;
+  gap: 1.6rem;
+  margin-bottom: 4rem;
+}
+
+.tag-item {
+  color: #3b3b3b;
+  background-color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.4rem 1.2rem;
+  border-radius: 1.6rem;
+}
+
+/*------------------------------------*/
+/*RWD 設定 max-width: 1295px*/
+@media (max-width: 80em) {
+  .intro-box {
+    margin: 2.4rem 0 4.8rem 0;
+    padding: 0;
+    text-align: center;
+  }
+  .intro-wrap {
+    border: none;
+  }
+  .work-name {
+    color: #1e1e1e;
+  }
+  .work-text {
+    color: #5b5b5b;
+  }
+  .tag-menu {
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  .tag-item {
+    color: #3b3b3b;
+    background-color: #f1f1f1;
+  }
+}
+/*RWD 設定 max-width: 576px*/
+@media (max-width: 36em) {
+  .intro-box {
+    max-width: 37.5rem;
+    background: #ffffff;
+    border-radius: 1.6rem;
+    margin-bottom: 4.8rem;
+    text-align: center;
+  }
+  .intro-wrap {
+    width: 32.7rem;
+    border-bottom: none;
+    margin-bottom: 2rem;
+  }
+  .work-name {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 2.4rem;
+  }
+  .work-text {
+    margin-bottom: 1.6rem;
+  }
+  .tag-menu {
+    gap: 0.8rem;
+    margin-bottom: 2rem;
+  }
+}
+/*------------------------------------*/
+/**************************/
+/* HEADER */
+/**************************/
+.header {
+  padding: 2.8rem 0;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* NAVIGATION */
+.main-nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  color: #000;
+  font-weight: 400;
+  text-decoration: none;
+  padding: 0.4rem 0.8rem;
+  position: relative;
+  display: block;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  font-weight: 600;
+}
+
+.main-nav-link:hover::before,
+.main-nav-link:active::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid #919191;
+  -webkit-mask: conic-gradient(at 8px 8px, rgba(0, 0, 0, 0) 75%, #fff 0) 0 0/calc(100% - 8px) calc(100% - 8px), linear-gradient(#fff 0 0) content-box;
+          mask: conic-gradient(at 8px 8px, rgba(0, 0, 0, 0) 75%, #fff 0) 0 0/calc(100% - 8px) calc(100% - 8px), linear-gradient(#fff 0 0) content-box;
+}
+
+/* HAMBURGER MENU */
+.hamburger {
+  position: relative;
+}
+
+.nav-btn {
+  opacity: 0;
+  width: 4rem;
+  height: 4rem;
+  cursor: pointer;
+  border: 0;
+  background-color: #fff;
+}
+
+.hamburger-nav-list {
+  width: 37.5rem;
+  list-style: none;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.4rem;
+  padding: 4rem 0;
+  /*將選單下移，不要遮到header區塊*/
+  position: absolute;
+  top: 4.9rem;
+  right: -1.2rem;
+}
+
+.close {
+  display: none;
+}
+
+/*------------------------------------*/
+/*RWD 設定 max-width: 576px*/
+@media (max-width: 48em) {
+  .header {
+    padding: 0.8rem 1.2rem;
+    border-bottom: 1px solid #f1f1f1;
+  }
+  .main-nav-list {
+    display: none;
+  }
+  .nav-btn {
+    opacity: 100;
+  }
+}
+/*------------------------------------*/
+/**************************/
+/* FOOTER SECTION */
+/**************************/
+.footer {
+  border-top: 1px solid #f1f1f1;
+  padding: 8rem 0;
+  background: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/footer-bg-lg.png?raw=true);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.footer-flex-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+.footer-logo-slogen-box {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 2.4rem;
+}
+
+.footer-logo-box {
+  width: 12rem;
+  padding: 0.7rem;
+}
+
+.footer-slogen {
+  color: #3b3b3b;
+  font-size: 2rem;
+  line-height: 3rem;
+}
+
+.email:link,
+.email:visited {
+  display: block;
+  color: #919191;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  text-decoration: none;
+}
+
+.email:hover,
+.email:active {
+  color: #3b3b3b;
+}
+
+.footer-media-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.media-item {
+  display: flex;
+  justify-content: flex-start;
+  gap: 0.8rem;
+  text-align: left;
+}
+
+.media-link:link,
+.media-link:visited {
+  width: 30.6rem;
+  padding: 0.8rem 2.4rem;
+  color: #3b3b3b;
+  background-color: #fff;
+  outline: 1px solid #c1c1c1;
+  font-size: 2rem;
+  line-height: 3rem;
+  text-decoration: none;
+  border-radius: 0.8rem;
+}
+
+.media-link:hover,
+.media-link:active,
+.media-link.media-link--current {
+  color: #fff;
+  background-color: #000;
+  font-weight: 700;
+}
+
+/*------------------------------------*/
+/*RWD 設定 max-width: 767px*/
+@media (max-width: 46em) {
+  .footer {
+    background: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/footer-bg-sm.png?raw=true);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .footer-flex-box {
+    flex-direction: column;
+  }
+  .media-link:link,
+  .media-link:visited {
+    padding: 0.4rem 2.4rem;
+  }
+}
+/*------------------------------------*/
+/**************************/
+/* HERO SECTION */
+/**************************/
+.section-hero {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2.4rem;
+}
+
+.hero-text-box {
+  max-width: 43rem;
+}
+
+.hero-introduction {
+  color: #3b3b3b;
+  font-size: 4rem;
+  font-weight: 600;
+  line-height: 4.8rem;
+  margin-bottom: 2.4rem;
+}
+
+.hero-description {
+  color: #5b5b5b;
+  font-size: 2rem;
+  line-height: 3rem;
+  margin-bottom: 1.6rem;
+}
+
+.hero-technical-text {
+  color: #c1c1c1;
+  margin-bottom: 6rem;
+}
+
+.media-link-menu {
+  display: flex;
+  gap: 16px;
+  list-style: none;
+}
+
+.media-link-menu ion-icon {
+  width: 5.6rem;
+  height: 5.6rem;
+  display: block;
+  color: #5b5b5b;
+}
+
+.hero-sm-image {
+  display: none;
+}
+
+.mask {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/*------------------------------------*/
+/*RWD 設定 max-width: 992px*/
+@media (max-width: 62em) {
+  .section-hero {
+    flex-direction: column-reverse;
+    padding: 4rem 0;
+  }
+  /*作者介紹文字區塊*/
+  .hero-text-box {
+    max-width: 26.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  /*作者介紹文字 <h2>標籤*/
+  .hero-introduction {
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 3.84rem;
+  }
+  /*作者介紹文字 技術說明文字*/
+  .hero-technical-text {
+    margin-bottom: 2.4rem;
+  }
+  /*作者社群媒體清單 icon*/
+  .media-link-menu ion-icon {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+/*RWD 設定 max-width: 576px*/
+@media (max-width: 36em) {
+  .hero-lg-image {
+    display: none;
+  }
+  .hero-sm-image {
+    display: block;
+  }
+}
+/*------------------------------------*/
+/**************************/
+/* WORK SECTION */
+/**************************/
+.star-travel-platform {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/homepage-work1-bg.png?raw=true);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.financial-app {
+  background: linear-gradient(rgba(10, 16, 19, 0.5), rgba(10, 16, 19, 0.5)), url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/homepage-work2-lg.png?raw=true);
+  background-repeat: no-repeat;
+  background-size: 50%, cover;
+}
+
+.financial-app img {
+  opacity: 0;
+}
+
+.clinic-web {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/homepage-work3-bg.png?raw=true);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.clinic-web-image {
+  margin-bottom: 11.2rem;
+}
+
+/*------------------------------------*/
+/*RWD 設定 max-width: 1295px*/
+@media (max-width: 80em) {
+  .star-travel-platform {
+    background: none;
+  }
+  .star-travel-platform .flex-item {
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/homepage-work1-bg.png?raw=true);
+    padding: 9.3rem 4rem 0 4rem;
+  }
+  .financial-app {
+    background: none;
+  }
+  .financial-app .flex-item {
+    width: 100%;
+    background: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/homepage-work2-lg.png?raw=true);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .financial-app .flex-box {
+    flex-direction: column-reverse;
+  }
+  .clinic-web {
+    background: none;
+  }
+  .clinic-web .flex-item {
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/homepage-work3-bg.png?raw=true);
+    padding: 9.3rem 4rem 0 4rem;
+  }
+  .clinic-web-image {
+    margin-bottom: 9rem;
+  }
+  .clinic-web .intro-box {
+    margin-bottom: 8rem;
+  }
+}
+/*RWD 設定 max-width: 375px*/
+@media (max-width: 24em) {
+  .financial-app .flex-item {
+    width: 100%;
+    background: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/homepage-work2-sm.png?raw=true);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+/*------------------------------------*/
+/**************************/
+/* SERVICE SECTION */
+/**************************/
+.section-service {
+  background: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/homepage-services-bg.png?raw=true);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 12rem 0;
+}
+
+.service-menu {
+  margin-bottom: 8rem;
+}
+
+.service-item {
+  width: 30.6rem;
+  padding: 9.2rem;
+  text-align: center;
+  background: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/service-item-bg.png?raw=true);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 1.6rem;
+}
+
+.service-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 4.2rem;
+  text-decoration: none;
+}
+
+.contact-button {
+  text-align: center;
+}
+
+.contact-text {
+  color: #3b3b3b;
+  font-size: 2.8rem;
+  font-weight: 600;
+  line-height: 3.36rem;
+  margin-bottom: 4rem;
+}
+
+/*------------------------------------*/
+/*RWD 設定 max-width: 1200px*/
+@media (max-width: 75em) {
+  .section-service {
+    background: rgb(250, 250, 250);
+    padding: 8rem 0;
+  }
+  .service-link {
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+  }
+  .contact-text {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+}
+/*------------------------------------*/
+/**************************/
+/* ARTICLE SECTION */
+/**************************/
+.section-article {
+  padding: 12rem 0;
+}
+
+.article-menu {
+  margin-bottom: 4rem;
+}
+
+.article-item {
+  max-width: 41.6rem;
+}
+
+.article-image {
+  border-radius: 8px;
+  border: 1px solid #f1f1f1;
+  margin-bottom: 1.6rem;
+}
+
+.article-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.6rem;
+}
+
+.article-intro div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.article-tag {
+  display: block;
+  padding: 0.4rem 1.2rem;
+  color: #3b3b3b;
+  background-color: #f1f1f1;
+  border-radius: 1.6rem;
+  text-decoration: none;
+}
+
+.article-time {
+  color: #5b5b5b;
+}
+
+.more-article {
+  display: none;
+}
+
+/*------------------------------------*/
+/*RWD 設定 max-width: 1200px*/
+@media (max-width: 75em) {
+  .section-article {
+    padding: 8rem 0;
+  }
+  .article-item {
+    max-width: 35.1rem;
+  }
+  .more-article {
+    display: block;
+  }
+}
+/*------------------------------------*//*# sourceMappingURL=style.css.map */
