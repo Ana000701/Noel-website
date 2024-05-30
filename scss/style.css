@@ -339,12 +339,14 @@ img {
 }
 
 .main-nav-link:hover,
-.main-nav-link:active {
+.main-nav-link:active,
+.main-nav-list .main-nav-link--current {
   font-weight: 600;
 }
 
 .main-nav-link:hover::before,
-.main-nav-link:active::before {
+.main-nav-link:active::before,
+.main-nav-link--current {
   content: "";
   position: absolute;
   inset: 0;
