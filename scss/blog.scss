@@ -1,0 +1,132 @@
+@import "general";
+@import "header";
+@import "footer";
+.d-flex {
+  display: flex;
+  gap: 2.4rem;
+}
+.section-article {
+  padding: 12rem 0;
+}
+.article-menu {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6.4rem;
+  width: 75%;
+}
+.article-item {
+  display: flex;
+  gap: 1.6rem;
+}
+.title-subtext {
+  color: #919191;
+  margin-top: 2.4rem;
+}
+
+.article-image {
+  width: 30.6rem;
+  border-radius: 8px;
+  border: 1px solid #f1f1f1;
+  margin-bottom: 1.6rem;
+}
+
+.article-intro {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.article-intro div {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: start;
+  gap: 1.6rem;
+}
+
+.article-title {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.article-content {
+  color: #3b3b3b;
+}
+
+.article-time {
+  color: #5b5b5b;
+}
+
+.article-tag {
+  display: block;
+  padding: 0.4rem 1.2rem;
+  color: #3b3b3b;
+  background-color: #f1f1f1;
+  border-radius: 1.6rem;
+  text-decoration: none;
+}
+
+aside {
+  background-color: #fafafa;
+  text-align: left;
+  width: 24%;
+  padding: 8rem;
+}
+
+.blog-tag-menu {
+  list-style: none;
+  line-height: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.blog-tag-link:link,
+.blog-tag-link:visited {
+  font-size: 2rem;
+  text-decoration: none;
+  color: #5b5b5b;
+}
+
+.blog-tag-link:hover,
+.blog-tag-link:active,
+.blog-tag-link-current {
+  color: #1e1e1e;
+  border-bottom: 2px solid #1e1e1e;
+}
+/*------------------------------------*/
+/*RWD 設定 max-width: 1295px*/
+@media (max-width: 80em) {
+  .article-menu {
+    width: 100%;
+  }
+  aside {
+    display: none;
+  }
+}
+
+/*------------------------------------*/
+
+/*------------------------------------*/
+/* RWD 設定 max-width: 992px*/
+@media (max-width: 62em) {
+  .article-menu {
+    gap: 4rem;
+  }
+  .article-image {
+    width: 100%;
+  }
+  .article-item {
+    flex-direction: column;
+    padding: 0 3.45rem;
+  }
+  .article-intro div {
+    justify-content: space-between;
+  }
+  .article-content {
+    height: 7.2rem;
+    overflow: hidden;
+  }
+}
